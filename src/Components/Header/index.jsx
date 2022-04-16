@@ -3,10 +3,14 @@ import CustomLink from "../utilities/CustomLink";
 
 const Header = () => {
     return (
-        <div className="flex py-4 justify-between items-center container px-20 text-slate-50">
-            <p className="text-3xl font-mono font-extrabold animate-pulse ">
-                Will Smith
-            </p>
+        <div className="container flex items-center justify-between px-20 py-4 text-slate-50">
+            <CustomLink
+                to="/"
+                className="flex gap-2 text-3xl font-extrabold sfont-mono animate-pulse"
+            >
+                <img src="/images/favicon.svg" className="h-8" alt="" /> John
+                Smith
+            </CustomLink>
             <div className="space-x-8">
                 <CustomLink to="/">Home</CustomLink>
                 <CustomLink to="/blogs">Blogs</CustomLink>
