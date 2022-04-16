@@ -10,10 +10,10 @@ import Footer from "./Footer";
 function App() {
     return (
         <>
-            <header className="bg-slate-900 sticky top-0">
+            <header className="sticky top-0 bg-slate-900">
                 <Header />
             </header>
-            <main className="bg-slate-100 h-screen">
+            <main className="bg-slate-100 ">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/blogs" element={<Blogs />} />
