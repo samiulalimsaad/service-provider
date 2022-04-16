@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className="flex py-4 justify-between items-center container px-20 text-slate-50">
             <p className="text-3xl font-mono font-extrabold animate-pulse ">
-                John Doe
+                Will Smith
             </p>
             <div className="space-x-8">
                 <CustomLink to="/">Home</CustomLink>

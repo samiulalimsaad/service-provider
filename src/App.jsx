@@ -10,7 +10,7 @@ import Footer from "./Footer";
 function App() {
     return (
         <>
-            <header className="bg-slate-600 ">
+            <header className="bg-slate-900 sticky top-0">
                 <Header />
             </header>
             <main className="bg-slate-100 h-screen">
@@ -22,7 +22,7 @@ function App() {
                     <Route path="/signup" element={<SignUp />} />
                 </Routes>
             </main>
-            <footer>
+            <footer className="bg-slate-900">
                 <Footer />
             </footer>
         </>
