@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Service = ({ name, price, image, description, top }) => {
     return (
         <div
-            className={`relative sm:w-1/5 shadow-md rounded-md overflow-hidden hover:-translate-y-5 duration-500 ${
+            className={`relative sm:w-1/5 shadow-md rounded-md overflow-hidden hover:-translate-y-2 duration-500 ${
                 top ? "bg-teal-500 text-white" : "bg-white"
             }`}
         >
@@ -14,11 +14,11 @@ const Service = ({ name, price, image, description, top }) => {
                     top ? "text-slate-200" : "text-slate-600"
                 }`}
             >
-                <h2 className="text-4xl font-black text-center">{name}</h2>
-                <p className="font-mono text-2xl text-center text-extrabold">
+                <h2 className="text-2xl text-center">{name}</h2>
+                <p className="font-mono text-4xl font-extrabold text-center">
                     ${price}
                 </p>
-                <p className="">{description.substr(0, 300)}</p>
+                <p className="text-justify">{description.substr(0, 300)}</p>
             </div>
             <NavLink
                 to="/checkout"

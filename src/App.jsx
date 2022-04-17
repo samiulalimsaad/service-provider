@@ -2,11 +2,11 @@ import { Route, Routes } from "react-router-dom";
 import NotFound from "./Components/404";
 import About from "./Components/About";
 import Blogs from "./Components/Blogs";
+import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
 import Navbar from "./Components/Navbar";
 import SignUp from "./Components/SignUp";
-import Footer from "./Footer";
 
 function App() {
     return (
