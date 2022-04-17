@@ -1,7 +1,10 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../Firebase.init";
 import CustomLink from "../utilities/CustomLink";
 
 const Navbar = () => {
+    const [user, loading, error] = useAuthState(auth);
     return (
         <div className="px-4 py-4 space-y-4 sm:space-y-0 sm:container sm:px-20 sm:flex sm:items-center sm:justify-between text-slate-50">
             <CustomLink
@@ -16,8 +19,14 @@ const Navbar = () => {
                 <CustomLink to="/blogs">Blogs</CustomLink>
                 <CustomLink to="/about">About</CustomLink>
                 <CustomLink to="/checkout">Checkout</CustomLink>
-                <CustomLink to="/login">Login</CustomLink>
-                <CustomLink to="/signup">Signup</CustomLink>
+                {user ? (
+                    <CustomLink to="/logout">logout</CustomLink>
+                ) : (
+                    <>
+                        <CustomLink to="/login">Login</CustomLink>
+                        <CustomLink to="/signup">Signup</CustomLink>
+                    </>
+                )}
             </div>
         </div>
     );
