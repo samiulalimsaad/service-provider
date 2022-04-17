@@ -2,11 +2,13 @@ import { Route, Routes } from "react-router-dom";
 import NotFound from "./Components/404";
 import About from "./Components/About";
 import Blogs from "./Components/Blogs";
+import Checkout from "./Components/Checkout";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
 import Navbar from "./Components/Navbar";
 import SignUp from "./Components/SignUp";
+import PrivateRoute from "./Components/utilities/PrivateRoute";
 
 function App() {
     return (
@@ -22,6 +24,14 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<SignUp />} />
+                    <Route
+                        path="/checkout"
+                        element={
+                            <PrivateRoute>
+                                <Checkout />
+                            </PrivateRoute>
+                        }
+                    />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </main>
