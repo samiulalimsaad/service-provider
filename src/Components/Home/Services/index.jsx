@@ -12,11 +12,11 @@ const Services = () => {
     }, []);
 
     return (
-        <div id="services" className="container p-20">
+        <div id="services" className="p-4 sm:container sm:p-20">
             <h2 className="mb-8 text-6xl text-center text-slate-800">
                 Services
             </h2>
-            <div className="flex gap-4">
+            <div className="gap-4 space-y-4 sm:space-y-0 sm:flex justify-evenly">
                 {services?.map((service) => (
                     <Service key={service.id} {...service} />
                 ))}

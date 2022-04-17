@@ -1,15 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Service = ({ name, price, description, top }) => {
+const Service = ({ name, price, image, description, top }) => {
     return (
         <div
-            className={`relative w-1/5 shadow-md rounded-md ${
-                top
-                    ? "bg-teal-500 text-white hover:-translate-y-5 duration-1000"
-                    : "bg-white"
+            className={`relative sm:w-1/5 shadow-md rounded-md overflow-hidden hover:-translate-y-5 duration-500 ${
+                top ? "bg-teal-500 text-white" : "bg-white"
             }`}
         >
+            <img src={image} alt={name} />
             <div
                 className={`p-4 mb-8 space-y-8 ${
                     top ? "text-slate-200" : "text-slate-600"

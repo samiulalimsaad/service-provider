@@ -1,17 +1,17 @@
 import React from "react";
 import CustomLink from "../utilities/CustomLink";
 
-const Header = () => {
+const Navbar = () => {
     return (
-        <div className="container flex items-center justify-between px-20 py-4 text-slate-50">
+        <div className="px-4 py-4 space-y-4 sm:space-y-0 sm:container sm:px-20 sm:flex sm:items-center sm:justify-between text-slate-50">
             <CustomLink
                 to="/"
-                className="flex gap-2 text-3xl font-extrabold sfont-mono animate-pulse"
+                className="flex gap-2 font-mono text-3xl font-extrabold animate-pulse"
             >
                 <img src="/images/favicon.svg" className="h-8" alt="" /> John
                 Smith
             </CustomLink>
-            <div className="space-x-8">
+            <div className="flex flex-col flex-wrap items-center justify-center sm:flex-row sm:space-x-8 sm:flex-nowrap">
                 <CustomLink to="/">Home</CustomLink>
                 <CustomLink to="/blogs">Blogs</CustomLink>
                 <CustomLink to="/about">About</CustomLink>
@@ -23,4 +23,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Navbar;
