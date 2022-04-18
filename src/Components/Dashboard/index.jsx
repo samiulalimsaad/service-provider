@@ -8,8 +8,8 @@ const Dashboard = () => {
     const [user] = useAuthState(auth);
     const [updatePassword, updating, error] = useUpdatePassword(auth);
 
-    const [email, setEmail] = useState("");
-    console.log(user);
+    const [password, setPassword] = useState("");
+
     return (
         <div className="flex items-center justify-center p-4 sm:container sm:p-20">
             <div className="w-1/3">
@@ -50,13 +50,14 @@ const Dashboard = () => {
                             type="password"
                             placeholder="******************"
                             required
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
                     <div className="flex items-center justify-center mt-4 text-sky-600">
                         <button
                             type="button"
                             onClick={async () => {
-                                await updatePassword(email);
+                                await updatePassword(password);
                                 user &&
                                     toast.success("Password updated", {
                                         theme: "dark",

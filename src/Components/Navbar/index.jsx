@@ -21,7 +21,7 @@ const Navbar = () => {
                         <CustomLink to="/">Home</CustomLink>
                         <CustomLink to="/blogs">Blogs</CustomLink>
                         <CustomLink to="/about">About</CustomLink>
-                        {user ? (
+                        {user && user?.emailVerified ? (
                             <>
                                 <button
                                     onClick={() => signOut(auth)}
