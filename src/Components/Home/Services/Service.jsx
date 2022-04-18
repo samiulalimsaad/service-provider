@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Service = ({ name, price, image, description, top }) => {
+const Service = ({ id, name, price, image, description, top }) => {
     return (
         <div
             className={`relative sm:w-1/5 shadow-md rounded-md overflow-hidden hover:-translate-y-2 duration-500 ${
@@ -21,7 +21,7 @@ const Service = ({ name, price, image, description, top }) => {
                 <p className="text-justify">{description.substr(0, 300)}</p>
             </div>
             <NavLink
-                to="/checkout"
+                to={`/checkout/${id}`}
                 className={`absolute bottom-0 w-full py-2 text-center text-slate-700 rounded-md ${
                     top
                         ? "bg-teal-900 hover:bg-green-900 text-white"

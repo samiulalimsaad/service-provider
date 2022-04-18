@@ -5,7 +5,7 @@ import Q3 from "./Blog/Q3";
 
 const Blogs = () => {
     return (
-        <div className="container px-20 mx-auto space-y-8">
+        <div className="container px-20 mx-auto my-12 space-y-8">
             <Q1 />
             <Q2 />
             <Q3 />

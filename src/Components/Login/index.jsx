@@ -18,7 +18,7 @@ const Login = () => {
     const [user1] = useAuthState(auth);
     const [updatePassword, updating, errorPass] = useUpdatePassword(auth);
 
-    const [email, setEmail] = useState("second");
+    const [email, setEmail] = useState("");
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -46,9 +46,11 @@ const Login = () => {
                     className="p-4 px-8 pt-6 pb-8 mb-4 bg-white border rounded-md shadow-md border-slate-500"
                     onSubmit={signIn}
                 >
-                    {(error || errorGoogle) && (
+                    {(error || errorGoogle || errorPass) && (
                         <p className="p-4 mb-4 bg-red-200 rounded-md">
-                            {error?.message || errorGoogle.message}
+                            {error?.message ||
+                                errorGoogle?.message ||
+                                errorPass?.message}
                         </p>
                     )}
                     <div className="mb-4">
@@ -112,10 +114,9 @@ const Login = () => {
                             type="button"
                             onClick={async () => {
                                 await updatePassword(email);
-                                user1 &&
-                                    toast.success("Updated password!", {
-                                        theme: "dark",
-                                    });
+                                toast.success("Updated password!", {
+                                    theme: "dark",
+                                });
                             }}
                         >
                             Forgot Password?

@@ -12,7 +12,7 @@ const Q2 = () => {
                 Authorization.
             </p>
             <p>I'm using firebase hosing to host my site free</p>
-            <div>
+            <div className="space-y-2 list-disc">
                 <li>Password-based authentication</li>
                 <li>Multi-factor authentication</li>
                 <li>Certificate-based authentication</li>

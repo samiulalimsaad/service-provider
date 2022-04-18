@@ -3,6 +3,7 @@ import NotFound from "./Components/404";
 import About from "./Components/About";
 import Blogs from "./Components/Blogs";
 import Checkout from "./Components/Checkout";
+import Dashboard from "./Components/Dashboard";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
@@ -25,10 +26,18 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<SignUp />} />
                     <Route
-                        path="/checkout"
+                        path="/checkout/:id"
                         element={
                             <PrivateRoute>
                                 <Checkout />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/dashboard"
+                        element={
+                            <PrivateRoute>
+                                <Dashboard />
                             </PrivateRoute>
                         }
                     />

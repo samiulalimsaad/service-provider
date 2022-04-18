@@ -21,11 +21,18 @@ const Navbar = () => {
                         <CustomLink to="/">Home</CustomLink>
                         <CustomLink to="/blogs">Blogs</CustomLink>
                         <CustomLink to="/about">About</CustomLink>
-                        <CustomLink to="/checkout">Checkout</CustomLink>
                         {user ? (
-                            <button onClick={() => signOut(auth)} to="/logout">
-                                logout
-                            </button>
+                            <>
+                                <button
+                                    onClick={() => signOut(auth)}
+                                    to="/logout"
+                                >
+                                    logout
+                                </button>
+                                <CustomLink to="/dashboard">
+                                    Dashboard
+                                </CustomLink>
+                            </>
                         ) : (
                             <>
                                 <CustomLink to="/login">Login</CustomLink>
