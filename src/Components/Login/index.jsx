@@ -109,6 +109,7 @@ const Login = () => {
                     </div>
                     <div className="flex items-center justify-center mt-4 text-sky-600">
                         <button
+                            type="button"
                             onClick={async () => {
                                 await updatePassword(email);
                                 user1 &&

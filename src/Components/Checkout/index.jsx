@@ -15,13 +15,10 @@ const Checkout = () => {
                             First Name
                         </label>
                         <input
-                            className="block w-full px-4 py-3 mb-3 leading-tight border rounded appearance-none text-slate-700 border-slate-500 focus:outline-none focus:bg-white focus:border-slate-900"
+                            className="block w-full px-4 py-3 leading-tight border rounded appearance-none text-slate-700 border-slate-500 focus:outline-none focus:bg-white focus:border-slate-900"
                             id="grid-first-name"
                             type="text"
                         />
-                        <p className="text-xs italic text-slate-500">
-                            Please fill out this field.
-                        </p>
                     </div>
                     <div className="w-full px-3 md:w-1/2">
                         <label
