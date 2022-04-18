@@ -24,7 +24,7 @@ const Q1 = () => {
                             the system.
                         </td>
                         <td className="p-4 border border-teal-900">
-                            person's or user's are checked for accessing the
+                            persons or users are checked for accessing the
                             resources.
                         </td>
                     </tr>
@@ -41,8 +41,7 @@ const Q1 = () => {
                             done before the authorization process.
                         </td>
                         <td className="p-4 border border-teal-900">
-                            after the authentication process this process is
-                            done
+                            after the process allow user to accessing
                         </td>
                     </tr>
                     <tr>

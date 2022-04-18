@@ -18,7 +18,7 @@ const Service = ({ id, name, price, image, description, top }) => {
                 <p className="font-mono text-4xl font-extrabold text-center">
                     ${price}
                 </p>
-                <p className="text-justify">{description.substr(0, 300)}</p>
+                <p className="text-justify">{description.substr(0, 300)} ...</p>
             </div>
             <NavLink
                 to={`/checkout/${id}`}
