@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
     useAuthState,
     useSignInWithEmailAndPassword,
@@ -25,10 +25,11 @@ const Login = () => {
 
     const from = location.state?.from?.pathname || "/";
 
-    if (user1 || user || userGoogle) {
-        navigate(from, { replace: true });
-        return null;
-    }
+    useEffect(() => {
+        if (user1 || user || userGoogle) {
+            navigate(from, { replace: true });
+        }
+    }, [user, user1, userGoogle]);
 
     const signIn = (e) => {
         e.preventDefault();
@@ -41,7 +42,7 @@ const Login = () => {
 
     return (
         <div className="flex items-center justify-center p-4 sm:container sm:p-20">
-            <div className="w-1/3">
+            <div className="sm:w-1/3">
                 <form
                     className="p-4 px-8 pt-6 pb-8 mb-4 bg-white border rounded-md shadow-md border-slate-500"
                     onSubmit={signIn}

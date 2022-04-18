@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
     return (
-        <div className="container flex items-center justify-between p-20 mx-auto">
-            <div className="w-1/2 space-y-4 text-slate-800">
+        <div className="flex flex-col-reverse items-center justify-between mx-auto sm:p-20 sm:container">
+            <div className="p-4 space-y-4 sm:w-1/2 text-slate-800">
                 <h1 className="pb-8 text-5xl text-center text-semibold">
                     Samiul Alim (Saad)
                 </h1>
