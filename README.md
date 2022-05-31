@@ -1,10 +1,6 @@
 # John-Smith
 
-## Github Repo Link: <https://github.com/programming-hero-web-course-4/independent-service-provider-samiulalimsaad>
-
-## Live Site Link: <https://ph-assignment-10-d8306.web.app>
-
-### Features
+## Features
 
 -   checkout and dashboard protected
 -   will show 404 page for invalid route
@@ -13,7 +9,7 @@
 -   can use email or google account to login
 -   if user is logged in the he/she will she dashboard and logout button instead login, signup
 
-### Technologies
+## Technologies
 
 -   axios for fetching data
 -   firebase for hosting and authentication & authorization

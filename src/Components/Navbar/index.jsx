@@ -19,7 +19,7 @@ const Navbar = () => {
                 {!loading && (
                     <>
                         <CustomLink to="/">Home</CustomLink>
-                        <CustomLink to="/blogs">Blogs</CustomLink>
+                        {/* <CustomLink to="/blogs">Blogs</CustomLink> */}
                         <CustomLink to="/about">About</CustomLink>
                         {user && user?.emailVerified ? (
                             <>
